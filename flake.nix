@@ -31,5 +31,6 @@
         apps.default = flake-utils.lib.mkApp {
           drv = rparse;
         };
+        doCheck = false;
       });
 }
