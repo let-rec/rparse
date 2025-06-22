@@ -22,6 +22,7 @@
           version = "0.1";
           src = ./.;
           cargoLock.lockFile = ./Cargo.lock;
+          doCheck = false;
         };
       in {
         formatter = pkgs.alejandra;
@@ -31,6 +32,5 @@
         apps.default = flake-utils.lib.mkApp {
           drv = rparse;
         };
-        doCheck = false;
       });
 }
